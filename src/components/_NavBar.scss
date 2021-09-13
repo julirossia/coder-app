@@ -1,12 +1,23 @@
 header {
-    padding: 1rem;
+    padding: 0.8rem 0.8rem 0 0.8rem;
     background: black;
+   
+   
     .navbar{
         display: inline-flex;
-        width: 100%;
+        width: 98%;
         height: 30px;
+        padding: 0.8rem;
         justify-content: space-between;
 
+        p{
+            color: white;
+            display: flex;
+            justify-content: flex-start; 
+            padding-bottom: 0.5rem;
+            font-size: 21px;
+
+        }
     .links{
 
         display: flex;
@@ -14,13 +25,10 @@ header {
         a{
             padding: 0 1rem;
             color: white;
+            cursor: pointer;
         }
     }
-    p{
-        color: white;
-        display: flex;
-        justify-content: flex-start; 
-    }
+  
 }
 
 }

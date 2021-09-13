@@ -1,52 +1,31 @@
 header {
-  padding: 1rem;
-  background: black;
-}
-
-header .navbar {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  width: 100%;
-  height: 30px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-header .navbar .links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-header .navbar .links a {
-  padding: 0 1rem;
-  color: white;
-}
-
-header .navbar p {
-  color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
+  padding: 0.8rem 0.8rem 0 0.8rem;
+  background: black; }
+  header .navbar {
+    display: inline-flex;
+    width: 98%;
+    height: 30px;
+    padding: 0.8rem;
+    justify-content: space-between; }
+    header .navbar p {
+      color: white;
+      display: flex;
+      justify-content: flex-start;
+      padding-bottom: 0.5rem;
+      font-size: 21px; }
+    header .navbar .links {
+      display: flex;
+      justify-content: flex-end; }
+      header .navbar .links a {
+        padding: 0 1rem;
+        color: white;
+        cursor: pointer; }
 
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-}
+  box-sizing: content-box; }
 
 a {
   text-decoration: none;
-  color: black;
-}
-/*# sourceMappingURL=style.css.map */
+  color: black; }
