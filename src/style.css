@@ -26,6 +26,17 @@ main p {
   justify-content: center;
   font-size: 24px; }
 
+main .itemCount {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+  main .itemCount .quantity {
+    display: inline-flex;
+    justify-content: center; }
+  main .itemCount .confirm {
+    display: flex;
+    justify-content: center; }
+
 * {
   padding: 0;
   margin: 0;
