@@ -1,5 +1,4 @@
 import CartWidget from "../CartWidget/CartWidget";
-import ItemListContainer from "../ItemListContainer/ItemListContainer";
 
 const Nav = () =>{
     return(

@@ -1,10 +1,7 @@
-import { useState } from "react";
-import ItemListContainer from "../ItemListContainer/ItemListContainer";
-
     const Item = ({producto})=>{
        return (
            <>
-           <h2>{producto.title} - ${producto.price}</h2>
+           <h2>{producto.productName} - ${producto.price}</h2>
           </> 
        )
     } 

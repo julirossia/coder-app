@@ -2,8 +2,8 @@ import Item from "../Item/Item";
 
 const ItemList = ({productos}) => {
   return(
-     <ul>{productos.map((producto, indice)=>{
-return<Item producto={producto}/>
+     <ul>{productos.map((producto,id)=>{
+return<Item key={producto.id} producto={producto}/>
      })}</ul>
   )
 }

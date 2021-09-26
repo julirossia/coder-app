@@ -3,9 +3,9 @@ import ItemCount from "../ItemCount/ItemCount";
 import ItemList from "../ItemList/ItemList";
 
 const productosServer = [
-        {id:1, title:'computer', description:'lorem ipsum', price:150.000, picture:"" }, 
-        {id:2, title:'cell phone', description:'lorem ipsum', price:70.000, picture:"" }, 
-        {id:3, title:'headphone', description:'lorem ipsum', price:4.000, picture:"" }
+        {id:1, productName:'computer', price:150.000}, 
+        {id:2, productName:'cell phone', price:70.000 }, 
+        {id:3, productName:'headphone', price:4.000 }
     ] 
 
 
