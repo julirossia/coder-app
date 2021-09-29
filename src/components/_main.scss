@@ -4,6 +4,18 @@ main{
         justify-content: center;
         font-size: 24px;
     }
+    .card{
+        display: flex;
+        flex-direction: column;
+        background: grey;
+        width: 350px;
+        padding: 1rem;
+        img{
+            width: 300px;
+            height: auto;
+        }
+    }
+   
     .itemCount{
         display: flex;
         justify-content: center;

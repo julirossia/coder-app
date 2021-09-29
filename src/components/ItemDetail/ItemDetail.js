@@ -1,10 +1,13 @@
-const ItemDetail = ({category, description, image})=>{
-return(
+const ItemDetail = ({ detail, category, description, image, producto }) => {
+  return (
     <>
-<p>{description}</p>
-<img>{image}</img>
+    <section className="card">
+      <p>descripcion:{description}</p>
+      <p>categoría:{category}</p>
+      <img src={image}></img>
+      </section>
     </>
-)
-}
+  );
+};
 
 export default ItemDetail;
