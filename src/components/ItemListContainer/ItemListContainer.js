@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import ItemList from "../ItemList/ItemList";
-
+import { Route, useParams } from "react-router";
+import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 const productosServer = [
         {id:1, productName:'computer', price:150.000}, 
         {id:2, productName:'cell phone', price:70.000 }, 
@@ -11,16 +12,28 @@ const productosServer = [
 
 const ItemListContainer = ({titulo, subtitulo, edad, id}) =>{
    const [productos, setProductos] = useState([])
-    useEffect(()=>{
-        const time = new Promise((resolver)=>{
-            setTimeout(()=>{
+   const parametros = useParams()
+    console.log(parametros)
 
-                resolver(productosServer)
-            },2000)
+   
+
+        useEffect(()=>{
+            if (parametros.id === true ){
+                return (
+                    <><p>{productosServer.id}...</p></>
+                )
+            }else{
+            const time = new Promise((resolver)=>{
+                setTimeout(()=>{
+    
+                    resolver(productosServer)
+                },2000)
+            })
+            time.then((resultado)=>{
+    setProductos(resultado)        })
+            }
         })
-        time.then((resultado)=>{
-setProductos(resultado)        })
-    })
+    
 
     if(productos.length > 0){
         return (
@@ -31,6 +44,7 @@ setProductos(resultado)        })
 
         </div>
             <ItemList productos={productos}/>
+            <Route path="/item/:id" component={ItemDetailContainer} />
 
             </>
         )
