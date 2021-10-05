@@ -10,8 +10,8 @@ const Nav = () => {
         </Link>
         <div className="links">
           <CartWidget />
-          <Link to="/category/:id1">Categoría 1</Link>
-          <Link to="/category/:id2">Categoría 2</Link>
+          <Link to="/categoria/1">Categoría 1</Link>
+          <Link to="/categoria/2">Categoría 2</Link>
         </div>
       </nav>
     </>

@@ -4,23 +4,33 @@ import "./style.scss";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Cart from "./components/Cart/Cart";
+import { createContext } from "react/cjs/react.development";
+import ItemContext from "./components/Context/ItemContext";
+import { useState } from "react";
 
 const App = ({}) => {
+ const [carrito, setCarrito] = useState([])
+
   return (
+    <ItemContext.Provider value={{carrito,setCarrito}}>
     <BrowserRouter>
+    <>
       <header>
         <Nav />
       </header>
       <main>
         <Switch>
-        <Route path="/category/:id" component={ItemListContainer} />
-        <Route path="/cart" component={Cart} />
-        <Route path="/" component={ItemListContainer} />
+          <Route path="/categoria/:id" component={ItemListContainer} />
+          <Route path="/item/:id" component={ItemDetailContainer} />
+
+          <Route path="/cart" component={Cart} />
+
+          <Route path="/" component={ItemListContainer} />
         </Switch>
-        {/* <ItemListContainer id="main-header" titulo="Bienvenidos" /> */}
-        {/* <ItemDetailContainer /> */}
       </main>
+      </>
     </BrowserRouter>
+    </ItemContext.Provider>
   );
 };
 

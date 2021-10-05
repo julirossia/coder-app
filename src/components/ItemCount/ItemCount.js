@@ -1,15 +1,16 @@
 import { useState } from "react";
 
-const ItemCount = ({stock, initial, onAdd}) =>{
+const ItemCount = ({stock, initial, onAdd, carrito}) =>{
     const [count, setCount] =  useState(initial)
     return(
         <section className="itemCount">
             <div className="quantity">
-<button onClick={()=>{setCount(count - 1)}}>-</button> <span>contador: {count}</span>
-<button onClick={()=>{setCount(count + 1)}}>+</button>
+<button onClick={()=>{setCount(count - 1)}}>-</button> 
+<span>contador: {count}</span>
+<button onClick={()=>{setCount(count + 1)}}>+</button> 
 </div>
 <div className="confirm">
-<button onClick={()=>{}}>Confirmar compra</button>
+<button onClick={()=>onAdd(count)}>Confirmar compra</button>
 </div>
         </section>
     )
