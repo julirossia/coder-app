@@ -4,15 +4,14 @@ import "./style.scss";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Cart from "./components/Cart/Cart";
-import { createContext } from "react/cjs/react.development";
-import ItemContext from "./components/Context/ItemContext";
+import CartContext from "./components/Context/CartContext";
 import { useState } from "react";
 
 const App = ({}) => {
  const [carrito, setCarrito] = useState([])
 
   return (
-    <ItemContext.Provider value={{carrito,setCarrito}}>
+    <CartContext.Provider value={{carrito,setCarrito}}>
     <BrowserRouter>
     <>
       <header>
@@ -30,7 +29,7 @@ const App = ({}) => {
       </main>
       </>
     </BrowserRouter>
-    </ItemContext.Provider>
+    </CartContext.Provider>
   );
 };
 

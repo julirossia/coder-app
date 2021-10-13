@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const ItemCount = ({stock, initial, onAdd, carrito}) =>{
     const [count, setCount] =  useState(initial)
@@ -9,9 +10,9 @@ const ItemCount = ({stock, initial, onAdd, carrito}) =>{
 <span>contador: {count}</span>
 <button onClick={()=>{setCount(count + 1)}}>+</button> 
 </div>
-<div className="confirm">
-<button onClick={()=>onAdd(count)}>Confirmar compra</button>
-</div>
+<span className="confirm">
+<Link to="/cart" onClick={()=>onAdd(count)}>Confirmar compra</Link>
+</span>
         </section>
     )
 }

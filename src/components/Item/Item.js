@@ -1,10 +1,12 @@
     import { Link } from "react-router-dom";
     const Item = ({producto})=>{
        return (
-           <>
-          <Link to={`/item/${producto.id}`}><h2>{producto.productName} - ${producto.price}</h2>ver mas</Link> 
+           <div className="product-card">
+           <h3 className="item-list-detail">{producto.productName}</h3>
+          <p className="item-price">${producto.price}</p>  
+          <Link to={`/item/${producto.id}`}className="more"><span>ver mas</span></Link> 
 
-          </> 
+          </div> 
        )
     } 
 

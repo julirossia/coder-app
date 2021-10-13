@@ -1,12 +1,13 @@
 import { useContext } from "react/cjs/react.development";
-import ItemContext from "../Context/ItemContext";
+import CartContext from "../Context/CartContext";
 
 const Cart = () =>{
 
-    const {carrito} = useContext(ItemContext)
+    const {carrito} = useContext(CartContext)
     const listaTotales = []
     return(
-        <>
+        <section className="buy-card-container">
+        <div className="buy-card">
         <p>Realizar Compra</p>
         <ul>
             {carrito.map((producto)=>{
@@ -19,8 +20,9 @@ const Cart = () =>{
             })
         }
         </ul>
-        <h3>Total:{listaTotales.reduce((prev, next)=> prev + next)}</h3>
-        </>
+{/*         <h3>Total:{listaTotales.reduce((prev, next)=> prev + next)}</h3>
+ */}        </div>
+ </section>
     )
 }
 
